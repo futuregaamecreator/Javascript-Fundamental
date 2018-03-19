@@ -171,6 +171,7 @@ john.age = age;
 console.log(john);
 
 */
+/*
 var john = {
   name: 'John',
   lastName:'Smith',
@@ -186,3 +187,65 @@ var john = {
 
 john.calculateAge();
 console.log(john);
+*/
+//////////////////////////////////////////////////
+///// lecture: Loops
+/*
+for (var i = 0; i < 10; i++ ){
+  console.log(i);
+}
+
+var names = ['John', 'Jane', 'Mary','Mark', 'Bob'];
+
+// for loops
+for (var i = 0; i < names.length; i++){
+  console.log(names[i]);
+}
+
+for (var i = names.length - 1; i >= 0; i--) {
+  console.log(names[i]);
+}
+
+var i = 0;
+while(i < names.length){
+  console.log(names[i]);
+  i++;
+}
+
+for (var i = 1; i <= 5; i++){
+  if(i === 3){
+    continue;
+  }
+  console.log(i);
+}
+*/
+
+/////////////////////////////
+///Quiz
+
+ var yearsBorn = [1987, 1926, 1968, 1948, 2000, 2010];
+
+ function printFullAge(yearsBorn) {
+
+   var ages = [];
+   var fullAges =  [];
+   for ( var i = 0; i < yearsBorn.length; i++){
+     ages[i] = 2017 - yearsBorn[i];
+     console.log(ages[i]);
+   }
+
+   for(i = 0; i < ages.length; i++){
+     if (ages[i] >= 18) {
+       console.log('Person is ' + ages[i] + ' years old, and is of full age.');
+       fullAges.push(true);
+     }
+     else {  console.log('Person is ' + ages[i] +' years old, and is NOT of full age.');
+     fullAges.push(false);
+     }
+   }
+   return fullAges;
+ }
+
+var yearsBorn = [1987, 1926, 1968, 1948, 2000, 2010];
+var full_1 = printFullAge(yearsBorn);
+var full_2 = printFullAge([1990, 1954, 1662]);
